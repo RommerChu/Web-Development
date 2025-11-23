@@ -1,0 +1,27 @@
+/* Write your code here: */
+
+/*GROUP SELECTOR*/
+h1,
+h2 {
+  color: blueviolet;
+}
+
+/*CHILD SELECTOR*/
+.box > .done {
+  color: firebrick;
+}
+
+/*DESCENDANT SELECTOR*/
+.box li {
+  color: blue;
+}
+
+/*CHAINING SELECTOR*/
+li.done {
+  color: cadetblue;
+}
+
+/*COMBINING SELECTOR*/
+ul p.done {
+  font-size: 0.5rem;
+}
