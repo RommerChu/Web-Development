@@ -1,0 +1,31 @@
+:root {
+  --font: "Regular Libre Baskerville", serif;
+  --center: center;
+  --border: 5px solid;
+  --margin: 20px 20px;
+  --padding: 10px 10px;
+  --color-burlywood: burlywood;
+  --color-white: White;
+  --color-black: Black;
+  --upperCase: uppercase;
+}
+
+* {
+  background-color: var(--color-black);
+  text-align: var(--center);
+}
+h1 {
+  font-family: var(--font);
+  color: var(--color-white);
+  text-transform: var(--upperCase);
+}
+p {
+  color: var(--color-white);
+  font-style: italic;
+}
+
+img {
+  border: var(--border) var(--color-burlywood);
+  border-radius: 20px;
+  margin: var(--margin);
+}
