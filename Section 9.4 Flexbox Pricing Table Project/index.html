@@ -4,17 +4,57 @@
     <title>Flexbox Pricing Table</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet" />
     <style>
       body {
         font-family: "Sono", sans-serif;
+        font-size: 16px;
       }
 
       /* Hint: What can you do with a media query and flexbox? */
       @media (max-width: 1250px) {
+        .pricing-container {
+          /* display: flex; */
+          /* justify-content: space-around; */
+          /* align-items: center; */
+          align-content: center;
+        }
+      }
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100vh;
+        gap: 20px;
+      }
+      .pricing-plan {
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 20px 20px;
+        flex-basis: 300px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        text-align: center;
+      }
+
+      .plan-title {
+        font-size: 2rem;
+      }
+
+      .plan-features {
+        text-align: left;
+      }
+      button.plan-button {
+        border: 0;
+        background-color: chocolate;
+        border-radius: 10px;
+        padding: 10px 10px;
+        width: 105px;
+        color: white;
+      }
+      li {
+        list-style: none;
       }
     </style>
   </head>
