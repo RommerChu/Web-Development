@@ -1,0 +1,19 @@
+var numBottles = 99
+while (numBottles >= 0) {
+
+	var bottleWord = "bottle";	
+	if (numBottles === 1) {
+	bottleWord = "bottles";
+	}
+	else if (numBottles === 0){
+	bottleWord = "No more bottles";
+	}
+	
+	
+	console.log(`${numBottles} ${bottleWord} of beer on the wall.`);
+	console.log(`${numBottles} ${bottleWord} of beer,`);
+	console.log(`Take one down, pass it around,`);
+	numBottles--;
+	console.log(`${numBottles} ${bottleWord} of beer on the wall.`);
+	
+}
