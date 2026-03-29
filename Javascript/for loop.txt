@@ -3,7 +3,6 @@ For Loops
 
 var n = [];
 
-
 function fizzBuzz(){
 
 	for(let x=100; x>1; x--){
