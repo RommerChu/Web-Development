@@ -48,6 +48,12 @@ for (let x = 0; x < numOfButton; x++) {
     //alert("Test");
   });
 }
+
+document.addEventListener("keydown", (event) => {
+  //alert("key word press!");
+  console.log(event);
+});
+
 // var sound = new Audio("sounds/crash.mp3");
 // sound.play();
 
