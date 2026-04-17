@@ -1,1 +1,1 @@
-$("h1").css("color", "green");
+document.querySelector("h1").innerHTML = "Romer";
