@@ -1,13 +1,13 @@
 {
-  "name": "learning-npm",
+  "name": "2.3-npm",
   "version": "1.0.0",
-  "description": "I'm learning npm",
+  "description": "learning npm",
   "keywords": [
-    "Rommer",
-    "Chu"
+    "learning",
+    "npm"
   ],
   "license": "ISC",
-  "author": "Rommer Chu",
+  "author": "rommer chu",
   "type": "module",
   "main": "index.js",
   "scripts": {

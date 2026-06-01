@@ -1,9 +1,14 @@
-//var generateName = require("sillyname");
-import superheroes from "superheroes";
-const name = superheroes.random();
-console.log(`I am  ${name}`);
+// var generateName = require("sillyname");
+import generateName from "sillyName";
+import {randomSuperhero} from "superheroes";
+//import superheroes from "superheroes";
 
-// import generateName from "sillyname";
-// var sillyName = generateName();
+var sillyName = generateName();
+console.log(`My name is ${sillyName}.`);
 
-// console.log(`My name is ${sillyName}`);
+// var name = "I am";
+
+// console.log(name + " " + sillyName);
+
+const name = randomSuperhero();
+console.log(`I am ${name}`);
