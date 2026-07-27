@@ -2,14 +2,15 @@ import express from "express";
 import {dirname} from "path";
 import {fileURLToPath} from "url";
 import bodyParser from "body-parser";
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
+const __dirname = dirname(fileURLToPath(import.meta.url)); //dirrectory name to path
 const app = express();
 const port = 3000;
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: true})); //To create a body for URL-encoded request like form submission.
 
 app.get("/", (req, res) => {
+  //console.log(__dirname + "/public/index.html");
   res.sendFile(__dirname + "/public/index.html");
 });
 
