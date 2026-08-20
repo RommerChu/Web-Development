@@ -14,7 +14,8 @@ app.get("/", (req, res) => {
 app.post("/submit", (req, res) => {
   const rdmAdj = adj[Math.floor(Math.random() * adj.length)];
   const rdmNoun = noun[Math.floor(Math.random() * noun.length)];
-  res.render("index.ejs");
+  const newLocal = "index.ejs";
+  res.render(newLocal, {adjective: rdmAdj, noun: rdmNoun});
 });
 
 app.listen(port, () => {
