@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Taco Recipes</title>
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+
+<body>
+  <h1>Taco Town 🌮</h1>
+
+  <form action="/recipe" method="POST" class="buttons">
+    <button type="submit" value="chicken" name="choice">🍗</button>
+    <button type="submit" value="beef" name="choice">🥩</button>
+    <button type="submit" value="fish" name="choice">🐟</button>
+  </form>
+
+  <div id="recipeContainer" class="hidden">
+     <!-- If no recipe yet, show: -->
+<% if(locals.menu){ %>
+  <h2 id="recipeTitle">
+        <%= menu.name %>
+      </h2>
+<h3>Ingredients:</h3>
+    <ul id="ingredientsList">
+      <li>
+        <%= menu.ingredients.protein.name %>, 
+        <%= menu.ingredients.protein.preparation %>
+      </li>
+      <li>
+        <%= menu.ingredients.salsa.name %>, spiciness: 
+      <!--ADDED CONDITIONS FOR SPICINESS-->
+        <% var spiciness = menu.ingredients.salsa.spiciness %>
+        <% if(spiciness==="Medium"){%>
+              <b style="color:green"><%= menu.ingredients.salsa.spiciness %></b>            
+        <%} else if(spiciness==="Mild") {%>
+              <b style="color:aqua"><%= menu.ingredients.salsa.spiciness %></b>
+        <%} else {%>
+              <b style="color:red"><%= menu.ingredients.salsa.spiciness %></b>
+        <%} %>          
+      </li>
+      <% menu.ingredients.toppings.forEach( topping =>{ %>
+        <li>
+          <%= topping.quantity%> of <%= topping.name %>
+        </li>
+      <%})%>
+    </ul>
+<!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
+<% } else { %>
+    <h2>Pick your favourite taco ingredient 👆</h2>
+<% } %>
+  </div>
+
+</body>
+
+</html>

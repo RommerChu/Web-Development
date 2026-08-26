@@ -1,0 +1,38 @@
+<% switch (menu.ingredients.salsa.spiciness) {
+	case "Medium":%>
+		<b style="color:green"><%= menu.ingredients.salsa.spiciness %></b>
+		<%break;
+	case "Hot":%>
+		<b style="color:red"><%= menu.ingredients.salsa.spiciness %></b>
+		<%break;
+	case "Mild":%>
+		<b style="color:aqua"><%= menu.ingredients.salsa.spiciness %></b>
+		default:
+		<%break;
+} %>
+
+-----------------------------
+<% let spiciness = menu.ingredients.salsa.spiciness %>
+<% switch (spiciness) {
+	case "Medium":%>
+		<b style="color:green"><%= spiciness %></b>
+		<%break;
+	case "Hot":%>
+		<b style="color:red"><%= spiciness %></b>
+		<%break;
+	case "Mild":%>
+		<b style="color:aqua"><%= spiciness %></b>
+		default:
+		<%break;
+} %>
+
+-----------------------------
+<% let spiciness = menu.ingredients.salsa.spiciness %>
+<% if(spiciness==="Medium"){%>
+      <b style="color:green"><%= menu.ingredients.salsa.spiciness %></b>            
+<%} else if(spiciness==="Mild") {%>
+      <b style="color:aqua"><%= menu.ingredients.salsa.spiciness %></b>
+<%} else {%>
+      <b style="color:red"><%= menu.ingredients.salsa.spiciness %></b>
+<%} %>
+		
