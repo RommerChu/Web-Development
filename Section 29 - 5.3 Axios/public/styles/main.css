@@ -75,6 +75,7 @@ h1 {
 .tag-error {
   width: 100%;
   text-align: center;
+  color: red;
 }
 /* ------------ */
 .is-element-hidden {
