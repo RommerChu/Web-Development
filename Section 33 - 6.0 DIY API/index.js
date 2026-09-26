@@ -8,15 +8,27 @@ const site = "http://localhost:3000";
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-//1. GET a random joke
+//1. GET a random joke.....specific ID
 app.get("/random", (req, res) => {
   const randomIndex = Math.floor(Math.random() * jokes.length);
   res.json(jokes[randomIndex]);
 });
 
-//2. GET a specific joke
+//2. GET a specific joke.....FIND
+app.get("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  // using FIND
+  const foundJoke = jokes.find((joke) => joke.id === id);
+  res.json(foundJoke);
+});
 
-//3. GET a jokes by filtering on the joke type
+//3. GET a jokes by filtering on the joke type.....FILTER
+app.get("/filter", (req, res) => {
+  const type = req.query.type;
+  // using FILTER
+  const filterType = jokes.filter((joke) => joke.jokeType === type);
+  res.json(filterType);
+});
 
 //4. POST a new joke
 
