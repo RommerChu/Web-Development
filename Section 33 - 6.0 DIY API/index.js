@@ -86,13 +86,13 @@ app.delete("/jokes/:id", (req, res) => {
 });
 
 //8. DELETE All jokes
-app.delete("/all", (req, res) => {
+app.delete("/jokes/all", (req, res) => {
   const userKey = req.query.key;
   if (userKey === masterKey) {
     jokes = [];
     res.sendStatus(200);
   } else {
-    res.sendStatus(404).json({error: `You are not autorized to perfome this acton.`});
+    res.sendStatus(404).json({error: `You are not autorized to performe this acton.`});
   }
 });
 
